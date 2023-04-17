@@ -1,0 +1,51 @@
+
+1. Las siguientes historias de usuario no son buenas:
+- Todos los gráficos y tablas se realizan utilizando una biblioteca de terceros.
+(al usuario no le preocupa como se generen los gráficos o tablas)
+- El software se lanzará el 30 de junio.(no habla del software en sí)
+- El software estará escrito en Java.(depende del producto)
+- El sistema utilizará Log4J para registrar todos los mensajes de error en un archivo.(al usuario no le preocupa que sistema se utilizará para los mensajes de error)
+
+- Un usuario puede dominar rápidamente el sistema.(es muy vaga, la palabra rápidamente no está bien definida)
+- El sistema puede calcular aproximaciones de puntos de silla para distribuciones de formas cuadráticas en variables normales.(depende, si este lenguaje matemático es muy difícil para los programadores, entonces se puede requerir discusión extra entre ellos y los que escribieron las historias de usuario)
+
+4 . ¿Cuáles pueden ser dos inconvenientes de usar historias de usuario?
+- El lenguaje natural que se usa en las historias de usuario puede 
+- En proyectos grandes puede ser difícil mantener organizados cientos o miles historias de usuarios.
+
+5 . ¿Cómo debes manejar un requisito para que un sistema escale y lo usen 1000 usuarios simultáneos?
+Se podría implementar pruebas normalmente y luego ir probando estas con más y más personas. Si en algún momento algo falla, se puede revisar y luego seguir incrementando el número de personas hasta que se llegue a las 1000.
+
+6. Proporciona algunos ejemplos de sistemas que podrían beneficiarse de una consideración más directa de la interfaz de usuario de lo que normalmente de daría en un proyecto ágil.
+Un sistema orientando a niños, ancianos o gente con discapacidad; en estos casos se debe tener una consideración especial de como se ha de construir la UI para la cual el desarrolo ágil puede ser insuficiente.
+
+7.
+```
+ Dado  un usuario con una cuenta gratuita
+ Cuando  este usuario inicie sesión
+ Entonces  se le mostrará un mensaje que dice "¡Suscríbete a Premium ahora con un 10 % de descuento!"
+```
+8.
+(ejemplo)
+Tres estudiantes eligen 3 cartas distintas para esta historia de usuario: 1/2, 1 y 2. Al ser tres distintas, se procede a una discusión. El estudiante que eligió 1/2 explica que dibujar un tablero vacío es bastante sencillo pués solo implica mostrar una matriz en consola. El que eligió 1, explica que su objetivo era implementar el tablero en una GUI, por lo que eligió más tiempo. El tercero explica que pensó lo mismo que el segundo, pero a diferencia de este, nunca ha trabajado con una librería GUI por lo que eligió el doble de tiempo considerando el tiempo que le tomará aprender sobre ello.
+
+El primer estudiante luego dice que empiezen por lo simple y que solo se concentren en la consola por ahora, luego la GUI la puede hacer el segundo estudiante que tiene más experiencia. Los demás concuerdan y eligen el estimado de 1/2.
+9.
+Ejemplos:
+---
+Escenario: No mostrar balance si he iniciado sesión.
+ Dado  que no he iniciado sesión en la app de mi banco.
+ Cuando  abro la app de mi banco.
+ Entonces  veo una página para iniciar sesión.
+  Y no veo mi balance bancario
+
+Escenario: Mostrar el balance en mi cuenta luego de iniciar sesión
+ Dado  que acabo de iniciar sesión en la app de mi banco.
+ Cuando  cargo la página de mis cuentas.
+ Entonces  puedo ver el balance de cada una de mis cuentas.
+ 
+
+10. ¿Prefieres escribir historias en tarjetas de notas o en un sistema de software?
+	En un sistema de software. Es mucho más rápido y fácilmente editable.
+
+
