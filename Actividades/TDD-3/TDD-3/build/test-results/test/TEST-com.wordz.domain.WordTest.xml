@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.wordz.domain.WordTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-04-17T17:00:44" hostname="pcs5-HP-EliteDesk-800-G4-SFF" time="0.038">
+  <properties/>
+  <testcase name="oneCorrectLetter()" classname="com.wordz.domain.WordTest" time="0.034"/>
+  <testcase name="allScoreCombinations()" classname="com.wordz.domain.WordTest" time="0.0"/>
+  <testcase name="secondLetterWrongPosition()" classname="com.wordz.domain.WordTest" time="0.001"/>
+  <testcase name="oneIncorrectLetter()" classname="com.wordz.domain.WordTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
