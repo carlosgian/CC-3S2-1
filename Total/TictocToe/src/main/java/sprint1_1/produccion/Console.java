@@ -19,7 +19,7 @@ public class Console {
     }
 
     public static void main(String[] args) {
-        new Console(new Board()).displayBoard();;
+        new Console(new Board()).displayBoard();
 
     }
 }
