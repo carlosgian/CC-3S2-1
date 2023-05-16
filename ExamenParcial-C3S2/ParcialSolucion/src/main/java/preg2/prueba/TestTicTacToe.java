@@ -30,7 +30,7 @@ public class TestTicTacToe {
 
     //Escribimos la prueba para el REQUISITO 2: soporte para 2 jugadores.
     //La prueba falla al principio porque no hemos hecho que el metodo jugar cambie turnos.
-    //Luego de agregar una instruccion para cambiar el turno en jugar(), el metodo pasa.
+    //Luego de agregar una instruccion para cambiar el turno en jugar(), las pruebas pasan
     @Test
     public void turnoInicial(){
         TicTacToe gameTemp = new TicTacToe();
@@ -61,7 +61,9 @@ public class TestTicTacToe {
     //Implemetamos la primera parte de winCondition para que detecte tan pronto como un jugador detecte la línea horizontal
     @Test
     public void testHorizontalLine(){
+        game.jugar(2,1);
         game.jugar(0,1);
+        game.jugar(1,0);
         game.jugar(0,2);
         assertEquals(true, game.winCondition());
     }
@@ -72,8 +74,55 @@ public class TestTicTacToe {
     public void testVerticalLine(){
         TicTacToe gameTemp = new TicTacToe();
         gameTemp.jugar(0,0);
+        gameTemp.jugar(0,1);
+        gameTemp.jugar(1,0);
+        gameTemp.jugar(1,1);
+        gameTemp.jugar(2,0);
+        assertEquals(true, gameTemp.winCondition());
+    }
+
+    //casi para terminar ya, escribimos las pruebas para detectar si se completo alguna diagonal. Hay dos de estas, por lo que se necesitan dos pruebas
+    //para implementar la deteccion de esta condicion, simplemente agregamos dos IF.
+    @Test
+    public void testMainDiagonal(){
+        TicTacToe gameTemp = new TicTacToe();
+        gameTemp.jugar(0,0);
+        gameTemp.jugar(0,1);
+        gameTemp.jugar(1,1);
+        gameTemp.jugar(1,0);
+        gameTemp.jugar(2,2);
+        assertEquals(true, gameTemp.winCondition());
+    }
+
+    //Para la diagonal secundaria se implementa una prueba similar.
+    //La implementacion se hace de manera similar.
+    @Test
+    public void testSecDiagonal(){
+        TicTacToe gameTemp = new TicTacToe();
+        gameTemp.jugar(0,2);
+        gameTemp.jugar(0,1);
+        gameTemp.jugar(1,1);
         gameTemp.jugar(1,0);
         gameTemp.jugar(2,0);
         assertEquals(true, gameTemp.winCondition());
+    }
+
+    //Para termianr queremos detectar si el juego queda en empate. Esto es sencillo, pues basta que se haya llenado el tablero y que
+    //ninguna condición de victoria se haya cumplido
+    //Para esto vamos a implementar un metodo nuevo isDraw
+    @Test
+    public void testDraw(){
+        TicTacToe gameTemp = new TicTacToe();
+        gameTemp.jugar(0, 1);
+        gameTemp.jugar(0, 0);
+        gameTemp.jugar(0, 2);
+        gameTemp.jugar(1, 2);
+        gameTemp.jugar(1, 0);
+        gameTemp.jugar(1, 1);
+        gameTemp.jugar(2, 2);
+        gameTemp.jugar(2, 0);
+        gameTemp.jugar(2, 1);
+        
+        assertEquals(true, gameTemp.isDraw());
     }
 }

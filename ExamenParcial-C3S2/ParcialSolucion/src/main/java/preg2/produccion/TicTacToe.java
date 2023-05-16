@@ -22,6 +22,7 @@ public class TicTacToe {
     }
 
     public boolean winCondition(){
+        //Para detectar lineas horizontales
         for (int i = 0; i < 3; i++ ){
             if ( grid[i][0] == 1 && grid[i][1] == 1 && grid[i][2] == 1){
                 return true;
@@ -31,6 +32,7 @@ public class TicTacToe {
             }
         }
 
+        //Para detectar lineas verticales
         for (int i = 0; i < 3; i++){
             if ( grid[0][i] == 1 && grid[1][i] == 1 && grid[2][i] == 1){
                 return true;
@@ -39,8 +41,32 @@ public class TicTacToe {
                 return true;
             }
         }
+
+        //Para detectar diagonal principal
+        if ( grid[0][0] == 1 && grid[1][1] == 1 && grid[2][2] == 1){
+            return true;
+        }
+        if ( grid[0][0] == 2 && grid[1][1] == 2 && grid[2][2] == 2){
+            return true;
+        }
+
+        if ( grid[0][2] == 1 && grid[1][1] == 1 && grid[2][0] == 1 ){
+            return true;
+        }
+        if ( grid[0][2] == 2 && grid[1][1] == 2 && grid[2][0] == 2 ){
+            return true;
+        }
         return false;
     }
 
+    public boolean isDraw(){
+        boolean boardFull = true;
+        for(int row = 0; row < 3; row++){
+            for(int column = 0; column < 3; column++){
+                if(grid[row][column] == 0) boardFull = false;
+            }
+        }
 
+        return boardFull && !winCondition();
+    }
 }
