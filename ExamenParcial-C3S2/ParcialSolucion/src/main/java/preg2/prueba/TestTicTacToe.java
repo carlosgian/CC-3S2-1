@@ -14,7 +14,7 @@ public class TestTicTacToe {
         game = new TicTacToe();
     }
     @Test
-    public void testJugarColumnaValida(){
+    public void testJugarFilaInvalida(){
         assertThrows(RuntimeException.class, () -> game.jugar(-1,2) );
     }
     @Test
