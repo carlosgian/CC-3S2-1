@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CountClumpsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-06-21T14:08:21" hostname="pcs5-HP-EliteDesk-800-G4-SFF" time="0.024">
+  <properties/>
+  <testcase name="inputArrayHasClumpAtStart()" classname="CountClumpsTest" time="0.015"/>
+  <testcase name="inputArrayIsLengthOne()" classname="CountClumpsTest" time="0.0"/>
+  <testcase name="inputArrayHasClumpInTheMiddle()" classname="CountClumpsTest" time="0.001"/>
+  <testcase name="inputArrayIsAllTheSame()" classname="CountClumpsTest" time="0.001"/>
+  <testcase name="inputArrayIsNull()" classname="CountClumpsTest" time="0.0"/>
+  <testcase name="inputArrayHasClumpAtEnd()" classname="CountClumpsTest" time="0.0"/>
+  <testcase name="inputArrayIsLengthZero()" classname="CountClumpsTest" time="0.0"/>
+  <testcase name="inputArrayHasClumpAtStartAndEnd()" classname="CountClumpsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
