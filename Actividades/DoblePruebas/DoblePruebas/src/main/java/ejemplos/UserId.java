@@ -1,2 +1,7 @@
-package ejemplos;public class UserId {
+package ejemplos;
+
+public class UserId {
+    public UserId(String id){
+
+    }
 }

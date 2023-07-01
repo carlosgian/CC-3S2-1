@@ -66,6 +66,8 @@ public class UserGreetingTest {
 Este es el uso estándar de los frameworks JUnit y AssertJ como hemos visto antes. 
 
 **Problema:** ¿Qué sucede si ejecutas la prueba ahora?. 
+**Respuesta** La prueba falla, pues se espera "Hola y bienvenido, Kapumota" pero se tiene ""
+
 
 3. Elimina el SUT, la clase que queremos escribir, con un paso Act: 
 
@@ -115,6 +117,7 @@ public class UserId {
 }
 ```
 **Problema:** ¿Qué sucede si ejecutas la prueba ahora?.  Explica la salida.
+**Respuesta:** La prueba sigue fallando pero ahora debido a una excepción. Esto es lo esperado pués aún no hemos definido la función formatsGreeting.
 
 6. Otra decisión de diseño a capturar es que la clase `UserGreeting` dependerá de una interfaz `UserProfiles`. 
 Necesitamos crear un campo, crear el esqueleto de la interfaz e inyectar el campo en un nuevo constructor para el SUT
@@ -144,6 +147,7 @@ public class UserGreetingTest {
 Continuamos agregando el código mínimo para que la prueba se compile. 
 
 **Problema:** ¿Qué sucede si ejecutas la prueba ahora?. Explica la salida.
+**Respuesta** Falla, profiles con es un objeto de UserId, que es lo que la función UserGreeting espera.
 
 7. Agrega comportamiento al método `formatGreeting()`: 
 
