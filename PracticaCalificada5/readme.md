@@ -114,6 +114,6 @@ Por último probamos que la imagen se ha creado correctamente, instanciando un c
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/PracticaCalificada5/images/detailsAlpineLinux.png)
 
 **Pregunta 4**
-La arquitectura basada en microservicios consiste en idear una aplicación como un conjunto de pequeños servicios. En contraste con la arquitectura monolítica clásica, permite independizar diferentes tareas de manera que cada una pueda desarrollarse,testearse e incluso fallar independientemente sin afectar a las otras. La automatización de la entrega y de pruebas consiste en poder entregar una nueva versión/probar tu programa de manera extensiva y con solo el ejecutar de una acción. La arquitectura de microservicios
+La arquitectura basada en microservicios consiste en idear una aplicación como un conjunto de pequeños servicios. En contraste con la arquitectura monolítica clásica, permite independizar diferentes tareas de manera que cada una pueda desarrollarse,testearse e incluso fallar independientemente sin afectar a las otras. La automatización de la entrega y de pruebas consiste en poder entregar una nueva versión/probar tu programa de manera extensiva y con solo el ejecutar de una acción. La arquitectura de microservicios ayuda a este propósito, pues dado que cada servicio que agregas es independiente, es fácil agregarlo a tu maquinaria de automatización ya implementada.
 
 
