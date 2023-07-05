@@ -35,7 +35,7 @@ T4 también pasa, pues el `if` después del `for` se asegura de contar al menos 
 **Pregunta 3**
 Mostrar los resultados del Code Coverage:
 
-![](https://github.com/carlosgian/PracticaCalificada3/codeCoverage.png)
+![]([https://github.com/carlosgian/PracticaCalificada3/codeCoverage.png](https://github.com/carlosgian/CC-3S2-1/blob/master/PracticaCalificada3/images/codeCoverage.png)
 
 **Pregunta 4**
 T5: int[] tiene un único clump al principio.
