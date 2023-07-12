@@ -35,12 +35,13 @@ product-service/src/test/java/com/kapumota/microservicios/core/product/ProductSe
 product-service/src/main/resources/application.properties
 product-service/src/main/java/com/kapumota/microservicios/core/product/ProductServiceApplication.java
 ```
-***Pregunta: Identifica y explica cuales son los archivos que creó Spring Initializr en este proyecto.***
+**Pregunta: Identifica y explica cuales son los archivos que creó Spring Initializr en este proyecto.**
 `gradlew.bat` y `gradlew` son scripts de inicialización para sistemas operativos Windows y UNIX respectivamente.
 `gradle-wrapper.jar` los archivos .class de tu proyecto y es llamado por los scripts de inicialización.
 `gradle-wrapper.properties` contiene información sobre gradle-wrapper, como por ejemplo la versión de Gradle que será usada.
 `build.gradle` es la configuración de como se construirá tu proyecto.
 `ProductServiceApplication.java` y `ProductServiceApplicationTests.java` son plantillas de clases de producción y prueba respectivamente.
+
 ---
 
 Subsecuentemente podemos construir cada microservicio por separado yendo al directorio y corriendo `./gradlew build` 4 veces.
