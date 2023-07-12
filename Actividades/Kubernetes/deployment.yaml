@@ -1,0 +1,22 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: calculador2-deployment 
+  labels: 
+    app: calculador2 
+spec: 
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      app: calculador2 
+  template: 
+    metadata: 
+      labels: 
+        app: calculador2 
+    spec: 
+      containers: 
+      - name: calculador2 
+        image: calculador2 
+        imagePullPolicy: Never 
+        ports: 
+        - containerPort: 8080 
