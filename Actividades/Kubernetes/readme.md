@@ -1,5 +1,5 @@
-##Actividad Kubernetes
-***Proceso de Instalación***
+## Actividad Kubernetes
+**Proceso de Instalación**
 Como estamos en el sistema operativo ubuntu, seguimos los pasos instalación del siguiente [link](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
 Usamos los siguientes comandos para instalar kubectl:
