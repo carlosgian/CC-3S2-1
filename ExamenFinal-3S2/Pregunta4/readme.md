@@ -135,6 +135,7 @@ Luego podemos terminar el servicio con `kill $(jobs -p)`
 **Preguntas**
 Dado que actualmente no estamos usando una base de datos, tenemos que simular cuándo lanzar NotFoundException. ¿Muestra eso?
 Rpta. Sí, cuando usamos el productid = 13.
+
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im15.png)
 
 ¿Qué hace el cliente API, es decir, el componente de integración del microservicio Composite?
