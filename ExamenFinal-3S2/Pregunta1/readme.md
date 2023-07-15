@@ -109,3 +109,4 @@ Y listo, con eso volvemos a correr las pruebas y vemos que todas pasan. Damos un
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im6.png)
 
 Damos por concluido el TDD.
+
