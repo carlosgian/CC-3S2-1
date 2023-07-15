@@ -1,6 +1,7 @@
 ## Pregunta1
 
 **Antes**
+
 Para empezar creamos el proyecto Antes de la carpeta Pregunta1, aquí esbozaremos una versión muy inicial del proyecto.
 
 Creamos la clase Flight con un único parámetro flightType que nos indicará el tipo de vuelo(económico o de negocios).
@@ -8,11 +9,13 @@ Como la clase Flight usa una objeto tipo Passenger, esbozamos el objeto Passenge
 Además esbozamos creamos un esbozo de la clase Airport donde creamos dos vuelos y dos pasajeros, y llamamos a los métodos addPassenger y removePassenger, y ademas imprimimos sus resultados para ver si funcionan como lo esperado.
 
 **Fase 1**
+
 Implementamos pruebas para el esbozo de lal clase Airport que escribimos antes.
 
 Aunque todo parece funcionar correctamente excepto que notamos una gran inconsistencia. Si bien en teoría el método `removePassenger` debe devolver `true` siempre que se le pase un pasajero que no sea VIP, ¿qué pasa cuando el vuelo es de negocios y el pasajero no es VIP?, la función devolverá true sin pensarlo mucho; sin embargo, ¿tiene sentido retirar un pasajero que no pudo ser admitido en primer lugar? No, en definitiva no. Esto es un problema en la lógica del proyecto y sugiere que una REFACTORIZACIÓN es necesaria. Además de eso, la lógica implementada con if/else en los métodos de la clase `Flight` no se ve muy bien y sugiere una separación de clases con una interfaz común.
 
 **Fase 2**
+
 En la fase 2 reemplazamos el código condicional que controla el comportamiento de `Flight` por diferentes versiones de esta clase. Implementar "diferentes" versiones de una misma clase se llama Polimorfismo y es uno de los 4 pilares del POO. Primero creamos la interface `Flight`. Como ahora cada clase implementada representa un tipo de vuelo, el parámetro `flightType` se vuelve innecesario, así que lo quitamos. Solo basta escribir las firmas de los métodos `addPassenger` y  `getPassenger` en la interfaz. Ahora pasamos a crear `BusinessFlight` y `EconomyFlight` que implementan la interfaz `Flight`. Definimos el comportamiento de acuerdo a si el pasajero es VIP o no y listo.
 
 Ahora necesitamos reescribir las pruebas para que reflejen los cambios que hemos hecho.
@@ -22,6 +25,7 @@ En cuanto a la cobertura de código, se están cubriendo todo lo hasta aquí imp
 La calidad de código ha mejorado considerablemente pues ahora los métodos `getPassenger` y `removePassenger` se ven mucho más legibles con menos condicionales.
 
 **Fase 3**
+
 En esta parte nos centramos en refactorizar nuestro código guiándonos de una clase de prueba que ya viene refactorizada: `AirportTest`.
 
 Viendo la clase AirportTest, podemos ver que podemos refactorizar varias cosas en nuestro código.
@@ -34,6 +38,7 @@ El tipo de retorno de los métodos siguen siendo `boolean`, y devuelve `true` so
 Luego de hacer los cambios necesarios, corremos `AirportTest` y vemos todo en verde.
 
 **Fase 4**
+
 Siguiendo la filosofía TDD, creamos una nueva clase PremiumFlight, pero no implementamos aún ninguna lógica en sus métodos.
 
 Implementamos primero las pruebas, nos guiamos de como han sido implementada las otras para crear la nueva sección `PremiumFlightTest`.
@@ -56,6 +61,7 @@ Luego nos vamos a inspeccionar la cobertura de código y vemos que la clases `Bu
 Luego de asegurarnos que la cobertura este al 100% pasamos a la Fase5.
 
 **Fase 5**
+
 En esta parte el cliente nos ha pedido asegurarnos que no se puedan agregar el mismo cliente dos veces a la misma lista. Siguiente el estilo TDD, implementaremos primero las pruebas que esto implica. Una vez con las pruebas implementadas, corremos los tests:
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im4.png)
 
