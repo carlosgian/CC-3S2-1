@@ -1,4 +1,5 @@
 ## Pregunta 4 - Implementando Product-Composite-Service.
+
 Continuando de la actividad de [Microservicios](https://github.com/carlosgian/CC-3S2-1/tree/master/Actividades/Microservicios) desarrollada en clase.
 
 Luego de implementar los microservicios `Product`, `Review` y `Recommendation` independientemente, vamos a implementar el servicio `Product-Composite` que, como su nombre lo dice, usa todos los anteriores juntos.
@@ -105,7 +106,10 @@ Producto se obtiene de manera normal. La lista de recomendaciones/reviews "summa
 
 Cabe mencionar también la clase `ServiceAddresses` que es solamente un conjunto de las 4 `ServiceAddress` de cada microservicio, los cuales se están obteniendo a través del metodo directo que cada constructor básico posee `getServiceAddress`.
 
+Por último nos aseguramos de crear el archivo `application.yml` en `Resources/`. Esto indica el puerto donde se desplegará el microserviocio, entre otras cosas.
+
 **Probando el microservicio**
+
 Ejecutamos `./gradle build` y posteriorement `java -jar microservicios/product-composite-service/build/libs/*.jar &` para empezar a correr el microservicio agregado:
 
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im7.png)
@@ -120,7 +124,7 @@ Y podemos hacer HTTP request con CURL:
 
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im10.png)
 
-Y darle un forma bonito con un poco de ayuda:
+Y darle una forma más bonita con un poco de ayuda:
 
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im11.png)
 
@@ -128,7 +132,16 @@ Luego podemos terminar el servicio con `kill $(jobs -p)`
 
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im12.png)
 
+**Preguntas**
+Dado que actualmente no estamos usando una base de datos, tenemos que simular cuándo lanzar NotFoundException. ¿Muestra eso?
+Rpta. Sí, cuando usamos el productid = 13.
+![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im13.png)
 
+¿Qué hace el cliente API, es decir, el componente de integración del microservicio Composite?
+Rpta. Se encarga de implementar los métodos de cada microservicio individual en uno solo.
 
+Explica el manejo de errores para getRecommendations() y getReviews() en el componente de integración.
+Rpta. El manejo de errores y excepciones fue pasado a `ProductCompositeServiceImpl`en este caso. Funciona de manera similar a sus contrapartes.
 
+Si se ingresa un `ProductId` menos que 1, se devuelve un InvalidInputException. Y si se escoge el `ProductId` como 13, se devuelve NotFoundException. (Se elige el 13 solo para ejemplificar. Además se usa el logger para imprimir mensajes al hacer los requests GET.
 
