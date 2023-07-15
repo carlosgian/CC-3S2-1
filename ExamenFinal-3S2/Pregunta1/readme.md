@@ -46,12 +46,15 @@ Usamos la anotación `@DisplayName` para patentar los criterios de aceptación q
 También usamos la anotación `@Nested` para las clases dentro de la principal, así marcamos una jerarquía clara y nos permite separar grupos de tests para cada criterio de aceptación de manera ordenada.
 
 Luego de programar los resultados esperados en las aserciones, corremos las pruebas:
+
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im1.png)
+
 Vemos algo interesante, y es que la prueba para un pasajero regular en un vuelo premium pasa sin haber implementado ninguna lógica, lo cual tiene sentido pues este pasajero no puede ser agregado y por lo tanto tampoco retirado de un vuelo premium.
 
 Luego procedemos a implementar la lógica para un pasajero VIP en un vuelo Premium.
 
 Una vez agregado, volvemos a ver las pruebas y vemos que todas pasan:
+
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im2.png)
 
 Luego nos vamos a inspeccionar la cobertura de código y vemos que la clases `BusinessFlight` y `PremiumFlight` solo están siendo cubiertas al 80%. Esto es porque no estamos testeando los métodos `getId` y `getPassengerList` de estas clases. Rápidamente agregamos algunas líneas en las aserciones para asegurarnos que la cobertura de código este al 100%.
@@ -63,6 +66,7 @@ Luego de asegurarnos que la cobertura este al 100% pasamos a la Fase5.
 **Fase 5**
 
 En esta parte el cliente nos ha pedido asegurarnos que no se puedan agregar el mismo cliente dos veces a la misma lista. Siguiente el estilo TDD, implementaremos primero las pruebas que esto implica. Una vez con las pruebas implementadas, corremos los tests:
+
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im4.png)
 
 El problema principal es que la lista tipo `ArrayList` que estamos usando hasta ahora permite añadir el mismo pasajero dos veces sin ningún problema. Para evitar agregar una serie de if/else complicados que dañarían la legibilidad del código, se decide refactorizar y cambiar los ArrayList a Mapas, en espécifico HashMaps. Los Mapas son una estructura de datos que están compuesta por varios pares de `Llave:Valor`, y permiten acceder a cada valor a través de su llave. Una característica de los HashMaps específicamente es que solo acepta llaves únicas, lo cual nos ayudará a evitar la duplicación de un pasajero.
@@ -112,6 +116,7 @@ public boolean removePassenger(Passenger passenger) {
     }
 ```
 Y listo, con eso volvemos a correr las pruebas y vemos que todas pasan. Damos una última revisasa a la cobertura de código y vemos todas las clase que implementan la lógica del programa al 100%:
+
 ![](https://github.com/carlosgian/CC-3S2-1/blob/master/ExamenFinal-3S2/images/preg1im6.png)
 
 Damos por concluido el TDD.
