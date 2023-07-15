@@ -88,7 +88,7 @@ Al hacer esto y correr de nuevos las pruebas, vemos algo interesante, las prueba
 
 `put` devuelve `null` si la llave ingresada es nueva, o el valor que se está reemplazando si la llave ya existe. Este comportamiento se encarga de asegurar de que no se puedan agregar pasajeros duplicados a un vuelo, pues el "mismo" valor reemplaza al anterior, y como en este caso devuelve un objeto no nulo, la función booleana `addPassenger()` devuelve `false`, lo cual es correcto, pues no se está agregando un nuevo pasajero.
 
-`remove` devuelve la llave del par retirado, o `null` si no se retira nada.
+`remove` devuelve el valor del par `llave:valor` retirado, o `null` si no se retira nada.
 
 Entonces las líneas de retorno donde se agregan/remueven pasajeros deben quedar así:
 ```
